@@ -1,0 +1,15 @@
+apiVersion: automation.cloudbees.io/v1alpha1
+kind: workflow
+name: No timeout workflow
+on:
+  workflow_dispatch:
+jobs:
+  quick-job:
+    steps:
+      - name: Quick step
+        uses: docker://alpine:3.17
+        shell: sh
+        run: |
+          echo "Starting quick job..."
+          sleep 5
+          echo "Job completed successfully"
