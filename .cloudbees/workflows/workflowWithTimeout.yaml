@@ -1,0 +1,16 @@
+apiVersion: automation.cloudbees.io/v1alpha1
+kind: workflow
+name: Timeout validation workflow
+on:
+  workflow_dispatch:
+jobs:
+  timeout-job:
+    timeout-minutes: 1
+    steps:
+      - name: Long running step
+        uses: docker://alpine:3.17
+        shell: sh
+        run: |
+          echo "Starting a job that will exceed timeout..."
+          sleep 120
+          echo "This should not be reached
