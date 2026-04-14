@@ -592,14 +592,6 @@ jobs:
         uses: docker://alpine:3.17
         shell: sh
         run: echo "Step 146"
-      - name: Step 147
-        uses: docker://alpine:3.17
-        shell: sh
-        run: echo "Step 147"
-      - name: Step 148
-        uses: docker://alpine:3.17
-        shell: sh
-        run: echo "Step 148"
       - name: Step 149
         uses: docker://alpine:3.17
         shell: sh
